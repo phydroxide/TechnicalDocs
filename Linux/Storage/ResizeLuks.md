@@ -50,6 +50,8 @@ DANGER - do not accept destructive options ...  you may have specified incorrect
 
 
 ![](./lvresize.png)
+
 ## Resize Filesystem
 sudo resize2fs /dev/mapper/vgmint-root
 
+![](./resize2fs.png)
