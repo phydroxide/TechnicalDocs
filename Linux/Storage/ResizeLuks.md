@@ -23,6 +23,7 @@ sudo cryptsetup open /dev/sda3 sda3_crypt
 ## Resize Partition
 
 ![](./resizepart.png)
+
 sudo parted 
 resizepart
 Partition Number? 3
@@ -35,12 +36,20 @@ sudo pvdisplay -m
 ![](./pvdisplay.png)
 
 sudo pvresize --setphysicalvolumesize 91.9G /dev/mapper/sda3_crypt 
+
 ![](./pv100.png)
 
 
 ## Resize Logical Volume
+Specify extent, or specify +extent by doing the math on free space yourself. 
+ 
 sudo lvresize -L +70G /dev/vgmint/root 
+sudo lvresize -l +4781 /dev/vgmint/root 
 
+DANGER - do not accept destructive options ...  you may have specified incorrectly the extents to be too big or small, which destroys data.
+
+
+![](./lvresize.png)
 ## Resize Filesystem
 sudo resize2fs /dev/mapper/vgmint-root
 
