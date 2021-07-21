@@ -10,27 +10,27 @@ Shut down the machine to resize the volume
 
 Virtual Machine -> Settings -> Hard Disk
 
-##Boot to Recovery ISO
+## Boot to Recovery ISO
 
 VMWare Settings -> CD/DVD - Use the Mint startup disk
 VMWare Settings -> Startup Disk
 
 
-##Open LUKS disk
+## Open LUKS disk
 sudo cryptsetup open /dev/sda3 sda3_crypt
 
-##Resize Partition
+## Resize Partition
 sudo parted 
 resize 3
 
-##Resize Physical Volume
+## Resize Physical Volume
 sudo pvdisplay -m
 sudo pvresize /dev/mapper/sda3_crypt 
 
 
-##Resize Logical Volume
+## Resize Logical Volume
 sudo lvresize -L +70G /dev/vgmint/root 
 
-##Resize Filesystem
+## Resize Filesystem
 sudo resize2fs /dev/mapper/vgmint-root
 
