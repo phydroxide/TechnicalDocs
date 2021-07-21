@@ -14,7 +14,7 @@ Virtual Machine -> Settings -> Hard Disk
 
 VMWare Settings -> CD/DVD - Use the Mint startup disk
 VMWare Settings -> Startup Disk
-
+![](./VMWareResize.png)
 
 ## Open LUKS disk
 sudo cryptsetup open /dev/sda3 sda3_crypt
