@@ -1,4 +1,4 @@
-u Resize LUKS Partition in VMWare
+# Resize LUKS Partition in VMWare
 
 I created a disk with a default size, and quickly ran out of space. Here is some documentation on how I resized the disk.
 
@@ -9,6 +9,7 @@ You have to remove all snapshots before resizing the partition
 Shut down the machine to resize the volume
 
 Virtual Machine -> Settings -> Hard Disk
+
 ![](./VMWareResize.png)
 
 ## Boot to Recovery ISO
@@ -20,6 +21,7 @@ VMWare Settings -> Startup Disk
 sudo cryptsetup open /dev/sda3 sda3_crypt
 
 ## Resize Partition
+
 ![](./resizepart.png)
 sudo parted 
 resizepart
@@ -29,7 +31,9 @@ End? 100GB
 
 ## Resize Physical Volume
 sudo pvdisplay -m
+
 ![](./pvdisplay.png)
+
 sudo pvresize --setphysicalvolumesize 91.9G /dev/mapper/sda3_crypt 
 ![](./pv100.png)
 
