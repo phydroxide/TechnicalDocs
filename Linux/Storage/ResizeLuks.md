@@ -1,6 +1,6 @@
 # Resize LUKS Partition in VMWare
 
-I created a disk with a default size, and quickly ran out of space. Here is some documentation on how I resized the disk.
+I created a disk with a default size, and quickly ran out of space. DiskManager does not let you resize from the GUI. Here is some documentation on how I resized the disk.
 
 ## Virtual Disk Resize
 
