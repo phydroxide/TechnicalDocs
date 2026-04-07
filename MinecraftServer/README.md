@@ -25,5 +25,10 @@ To avoid hosting for 15/month, we're going to build our own.
 
 [Fandom Wiki - Setting up a minecraft server](https://minecraft.fandom.com/wiki/Tutorials/Setting_up_a_server).
 
+1) [Setup Linux on UTM](AppleUTMLinux.md)
 
 
+## Open Questions
+Virtualize? Or not virtualize.
+
+Probably if we don't virtualize we can't run the right Java. I think it is best to avoid that out the gate, and our machines have sufficient performance it should be fine to virtualize 2026-04-06
