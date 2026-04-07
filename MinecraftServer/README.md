@@ -21,5 +21,9 @@ Instead I've returned to figure out how to do this on Linux.
 
 # Research
 
+To avoid hosting for 15/month, we're going to build our own. 
+
+[Fandom Wiki - Setting up a minecraft server](https://minecraft.fandom.com/wiki/Tutorials/Setting_up_a_server).
+
 
 
